@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syllkom | Developer Frontend</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <meta property="og:title" content="Syllkom | Frontend Designer">
+  <meta property="og:description" content="My personal portfolio, this project is open source for anyone who wants to use or modify it!">
+   <meta property="og:image" content="https://syllkom.koyep.app//assets/images/preview.png">
+  
+  <link rel="icon" href="./assets/images/icon.png" type="image/x-icon">
+  
+  <!--
+    - Font Awesome for icons
+   -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!--
+    - Google Fonts
+   -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!--
+    - Header
+   -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="Syllkom Logo">
+        <span>—Syll's</span>
+      </div>
+      
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+
+      
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--
+    - Hero Section
+   -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>@Syllkom</h1>
+        <p>Frontend <span class="type-effect" data-texts='["Developer", "Designer", "Creator"]'>Developer</span></p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i class="fas fa-code"></i> HorekuOs
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    - About Section
+   -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Me</h2>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <p>Hi, I'm Syllkom, a passionate frontend developer with expertise in creating modern, responsive, and interactive web applications. I love turning complex problems into simple, beautiful, and intuitive designs.</p>
+          
+          <p>With a strong foundation in HTML, CSS, and JavaScript, I build seamless user experiences that combine aesthetic appeal with functional excellence. My goal is to create digital solutions that not only meet but exceed client expectations.</p>
+          
+          <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <!--
+    - Experience Section
+   -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-title">
+        <h2>Experience</h2>
+      </div>
+      
+      <div class="experience-timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2025 - Present</div>
+          <div class="timeline-position">Semi Senior Frontend Developer</div>
+          <div class="timeline-company">TechCorp Solutions</div>
+          <div class="timeline-description">
+            I led the frontend development team in creating responsive and scalable web applications. I implemented modern UI/UX practices and optimized performance for various client projects such as: Syll's CodeLab and HorekuOs.
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2024 - Present</div>
+          <div class="timeline-position">Node.js Intermediate Developer</div>
+          <div class="timeline-company">Bots WhatsApp.</div>
+          <div class="timeline-description">
+            I developed WhatsApp bots like Kaze-Bot and XiaoBot-MD that made managing my clients' groups easier.
+          </div>
+          <div class="timeline-description">
+            My bots help improve interaction in WhatsApp groups with mini games, YouTube downloads, Spotify, and more.
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2023</div>
+          <div class="timeline-position">Junior Web Developer</div>
+          <div class="timeline-company">Digital Creations</div>
+          <div class="timeline-description">
+            Assisted in the development of responsive websites and web applications. Gained experience in modern frontend frameworks and best practices.
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-date">2021 - 2023</div>
+          <div class="timeline-position">Beginner Nodej.js Developer</div>
+          <div class="timeline-company">WhatsApp bots.</div>
+          <div class="timeline-description">
+            I participated in WhatsApp bot development projects. My first project was one a friend had called VaryonBot. I was an assistant and began to gain experience.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    - Projects Section
+   -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+      
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="bot">Bot</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+      
+      <div class="projects-grid">
+        <div class="project-card fade-in" data-category="bot">
+          <div class="project-thumbnail">
+            <img src="./assets/images/horeku.png" alt="HorekuOs Project">
+            <div class="project-category">WhatsApp bot.</div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">HorekuOs</h3>
+            <p class="project-description">A web-based operating system interface with multiple apps and utilities. Built with React and modern CSS.</p>
+            <div class="project-links">
+              <a href="#" class="view-code-btn" data-project="horekuos" data-title="HorekuOs" data-codetype="js">
+                <i class="fas fa-code"></i> View Code
+              </a>
+              <a href="https://wa.me/639511602879?text=.help" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card fade-in" data-category="bot">
+          <div class="project-thumbnail">
+            <img src="./assets/images/kaze.png" alt="Kaze-Bot Project">
+            <div class="project-category">Bot</div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Kaze-Bot</h3>
+            <p class="project-description">A multipurpose Discord bot with moderation, music, and fun commands. Built with Node.js and Discord.js.</p>
+            <div class="project-links">
+              <a href="#" class="view-code-btn" data-project="kaze-bot" data-title="Kaze-Bot" data-codetype="js">
+                <i class="fas fa-code"></i> View Code
+              </a>
+              <a href="#" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-thumbnail">
+            <img src="./assets/images/horeku-web.png" alt="app web">
+            <div class="project-category">App Web</div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">HorekuOs - Web</h3>
+            <p class="project-description">A web app dedicated to the HorekuOs WhatsApp bot, showcasing its features and more.</p>
+            <div class="project-links">
+              <a href="#" class="view-code-btn" data-project="weather-app" data-title="Weather Dashboard" data-codetype="css">
+                <i class="fas fa-code"></i> View Code
+              </a>
+              <a href="https://horekuos.netlify.app/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-thumbnail">
+            <img src="./assets/images/scl.png" alt="Task Manager Project">
+            <div class="project-category">App Web</div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Syll's CodeLab</h3>
+            <p class="project-description">Web application for Syll's CodeLab, a company dedicated to developing WhatsApp bots created by Syllkom.</p>
+            <div class="project-links">
+              <a href="#" class="view-code-btn" data-project="taskflow" data-title="TaskFlow" data-codetype="css">
+                <i class="fas fa-code"></i> View Code
+              </a>
+              <a href="https://syllscodelab.netlify.app/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card fade-in" data-category="ui">
+          <div class="project-thumbnail">
+            <img src="./assets/images/bio.png" alt="E-commerce Project">
+            <div class="project-category">UI</div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Bio Base</h3>
+            <p class="project-description">A simple yet attractive way to display links from all your social networks in one place.</p>
+            <div class="project-links">
+              <a href="#" class="view-code-btn" data-project="shopsmart" data-title="ShopSmart" data-codetype="css">
+                <i class="fas fa-code"></i> View Code
+              </a>
+              <a href="https://onigirinews.netlify.app/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card fade-in" data-category="ui">
+          <div class="project-thumbnail">
+            <img src="./assets/images/portafolio.png" alt="Portfolio Theme Project">
+            <div class="project-category">UI/UX</div>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Portfolio Personal</h3>
+            <p class="project-description">A customizable portfolio theme for creative professionals with multiple layout options.</p>
+            <div class="project-links">
+              <a href="#" class="view-code-btn" data-project="portfolio-pro" data-title="Portfolio Pro" data-codetype="css">
+                <i class="fas fa-code"></i> View Code
+              </a>
+              <a href="https://syllkom.netlify.app/" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    - Contact Section
+   -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact Me</h2>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          
+          <div class="contact-methods">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>syllkom.roto@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Perú</p>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>+57 311 3825327</p>
+              </div>
+            </div>
+          </div>
+          
+          <h3>Follow Me</h3>
+          <div class="contact-social">
+            <a href="https://github.com/Syllkom" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://youtube.com/@syllkom" class="social-icon" title="LinkedIn">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://t.me/Syllkom" class="social-icon" title="Twitter">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.instagram.com/syllkom" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/573113825327?text=Hola" class="social-icon" title="Dribbble">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@syllkom" class="social-icon" title="Dribbble">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Your name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Your email">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Your message"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send a message via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    - Code Viewer Modal
+   -->
+  <div class="code-viewer">
+    <div class="code-container">
+      <div class="code-header">
+        <div class="code-title">
+          <i class="fas fa-code"></i>
+          <span>Project Code</span>
+        </div>
+        <div class="code-actions">
+          <button class="code-action-btn download-code" title="Download">
+            <i class="fas fa-download"></i>
+          </button>
+          <button class="close-viewer" title="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <div class="code-content">
+        <pre class="code-block">// Code will appear here</pre>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    - Footer
+   -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>Creating digital experiences with passion and purpose, you are my inspiration, my little Mailen</p>
+        
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="copyright">
+          &copy; 2025 Syllkom. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    - JavaScript
+   -->
+  <script src="./assets/script/theme.js"></script>
+  <script src="./assets/script/main.js"></script>
+</body>
+</html>
