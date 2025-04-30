@@ -540,7 +540,7 @@ function initTypeEffect() {
       isDeleting = true
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false
-      textIndex = (textIndex + 1) % texts.length;
+      textIndex = (textIndex + 1) % texts.length
       typingSpeed = 500
     }
     
@@ -581,5 +581,124 @@ function initProjectFilters() {
     })
   })
 }
+
+  const downloadButtons = document.querySelectorAll('.download-btn')
+  
+  const downloaderSection = document.querySelector('.downloaders-section')
+  if (downloaderSection) {
+    setTimeout(() => {
+      downloaderSection.classList.add('section-visible')
+    }, 300)
+    
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        const items = document.querySelectorAll('.downloader-item')
+        items.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('item-visible')
+          }, 150 * index)
+        })
+      }
+    }, { threshold: 0.2 })
+    
+    observer.observe(downloaderSection)
+  }
+  
+  downloadButtons.forEach(button => {
+    const btnContainer = button.parentElement
+    let isTimerActive = false
+    let hasDownloaded = false
+    let timer = null
+    let timeLeft = 10
+    const totalTime = 10
+    
+    const timerContainer = document.createElement('div')
+    timerContainer.classList.add('download-timer')
+    timerContainer.style.opacity = '0'
+    timerContainer.textContent = `${timeLeft}s`
+    
+    const progressBar = document.createElement('div')
+    progressBar.classList.add('download-progress')
+    progressBar.style.width = '0%'
+    
+    btnContainer.appendChild(timerContainer)
+    btnContainer.appendChild(progressBar)
+    
+    const downloadUrl = button.dataset.downloadUrl || '#'
+    const downloadName = button.dataset.downloadName || 'file'
+    
+    button.addEventListener('mouseenter', () => {
+      if (!isTimerActive && !hasDownloaded) {
+        button.classList.add('btn-pulse')
+      }
+    })
+    
+    button.addEventListener('mouseleave', () => {
+      button.classList.remove('btn-pulse')
+    })
+    
+    button.addEventListener('click', function() {
+      if (hasDownloaded || isTimerActive) return
+      
+      button.innerHTML = '<i class="fas fa-hourglass-half"></i> Waiting...'
+      button.classList.remove('btn-pulse')
+      button.classList.add('btn-waiting')
+      
+      timerContainer.style.opacity = '1'
+      
+      isTimerActive = true
+      
+      timer = setInterval(() => {
+        timeLeft--
+        
+        timerContainer.textContent = `${timeLeft}s`
+        
+        const progress = ((totalTime - timeLeft) / totalTime) * 100
+        progressBar.style.width = `${progress}%`
+        
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          
+          timerContainer.textContent = 'Ready!'
+          timerContainer.style.color = 'var(--success-color)'
+          progressBar.style.width = '100%'
+          
+          button.innerHTML = '<i class="fas fa-download"></i> Download Now'
+          button.classList.remove('btn-waiting')
+          button.classList.add('btn-ready')
+          
+          setTimeout(() => {
+            button.classList.add('btn-shake')
+            setTimeout(() => button.classList.remove('btn-shake'), 500)
+          }, 100)
+          
+          button.addEventListener('click', function downloadHandler() {
+            if (downloadUrl !== '#') {
+              const downloadLink = document.createElement('a')
+              downloadLink.href = downloadUrl
+              downloadLink.download = downloadName
+              downloadLink.style.display = 'none'
+              document.body.appendChild(downloadLink)
+              downloadLink.click()
+              document.body.removeChild(downloadLink)
+            } else {
+              console.log(`Downloading: ${downloadName}`)
+            }
+            
+            timerContainer.textContent = 'Downloaded!'
+            button.innerHTML = '<i class="fas fa-check"></i> Downloaded'
+            button.classList.remove('btn-ready')
+            button.classList.add('btn-success')
+            
+            btnContainer.classList.add('download-completed')
+            
+            hasDownloaded = true
+            
+            button.removeEventListener('click', downloadHandler)
+          }, { once: true })
+        }
+      }, 1000)
+    })
+  })
 
 document.addEventListener('DOMContentLoaded', initProjectFilters)
